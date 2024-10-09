@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Interactive To-Do List</title>
+  <title>Interactive Drawing Canvas</title>
   <style>
     /* Optional: Add some basic styling */
-    #taskList li {
-      cursor: pointer;
-    }
-    #taskList li.completed {
-      text-decoration: line-through;
-      color: gray;
+    #drawingCanvas {
+      border: 1px solid #000;
+      cursor: crosshair;
     }
   </style>
 </head>
 <body>
-  <h1>My To-Do List</h1>
-  <input type="text" id="taskInput" placeholder="Enter a new task">
-  <button id="addTaskButton">Add Task</button>
-  <ul id="taskList"></ul>
+  <h1>Drawing Canvas</h1>
+  <div>
+    <label for="colorPicker">Choose Color:</label>
+    <input type="color" id="colorPicker" value="#000000">
+    <label for="lineWidth">Line Width:</label>
+    <input type="range" id="lineWidth" min="1" max="10" value="2">
+    <button id="clearButton">Clear Canvas</button>
+  </div>
+  <canvas id="drawingCanvas" width="800" height="500"></canvas>
 
   <!-- Include your JavaScript file here -->
-  <script src="index.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
